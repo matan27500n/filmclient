@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { AddFilmComponent } from './film/add-film/add-film.component';
 import { UpdateFilmComponent } from './film/update-film/update-film.component';
 import { FilmsListComponent } from './film/films-list/films-list.component';
-import { FormsModule } from '@angular/forms';
 import { FilmService } from './service/film.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { FilmService } from './service/film.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [FilmService],
